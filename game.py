@@ -11,8 +11,8 @@ def display_status():
 display_status()
 
 while money < 1000:
-    display_status()
-    action = input("\nWhat do you want to do? (cut/buy/quit): ")
+    
+    action = input("\nWhat do you want to do? (cut/buy/reset): ")
 
     if action == "cut":
         if tool == "teeth":
@@ -63,7 +63,7 @@ while money < 1000:
                 print("You don't have enough money to hire a team of starving students.")
         else:
             print("Invalid action. Please try again.")
-    elif action == "quit":
+    elif action == "reset":
         break
     else:
         print("Invalid action. Please try again.")
