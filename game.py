@@ -18,8 +18,8 @@ display_status()
 
 while money < 1000:
     
-    action = input("\nWhat do you want to do? (cut/buy/reset): ")
-
+    action = input("\nWhat do you want to do? (cut/buy/reset/quit): ")
+    display_status()
     if action == "cut":
         if tool == "teeth":
             money += 1
@@ -38,6 +38,7 @@ while money < 1000:
             print("You cut the grass using the team of starving students and earned $250.")
         else:
             print("Invalid action. Please try again.")
+        display_status()      
     elif action == "buy":
         if tool == "teeth":
             if money >= 5:
@@ -71,10 +72,12 @@ while money < 1000:
             print("Invalid action. Please try again.")
     elif action == "reset":
         reset_game()
+    elif action == "quit":
+        break
     else:
         print("Invalid action. Please try again.")
 
-display_status()
+
 
 if money >= 1000 and tool == "team of starving students":
     print("\nCongratulations! You won the game!")
