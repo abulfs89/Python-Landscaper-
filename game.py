@@ -7,6 +7,12 @@ def display_status():
  print(f"Tool: {tool}")
  print()
 
+def reset_game():
+    global money, tool
+    money = 0
+    tool = "teeth"
+    print("Game has been reset. You're back to using your teeth.")
+
 
 display_status()
 
@@ -64,7 +70,7 @@ while money < 1000:
         else:
             print("Invalid action. Please try again.")
     elif action == "reset":
-        break
+        reset_game()
     else:
         print("Invalid action. Please try again.")
 
