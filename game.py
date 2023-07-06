@@ -1,16 +1,13 @@
-# # Landscaper Game
-
-# # Initial values
 money = 0
 tool = "teeth"
 
-# # Function to display the current status
+
 def display_status():
  print(f"\nMoney: ${money}")
  print(f"Tool: {tool}")
  print()
 
-# # Start the game
+
 display_status()
 
 while money < 1000:
@@ -70,9 +67,9 @@ while money < 1000:
         break
     else:
         print("Invalid action. Please try again.")
-        
+
 display_status()
-# Check if the game is won
+
 if money >= 1000 and tool == "team of starving students":
     print("\nCongratulations! You won the game!")
 else:
